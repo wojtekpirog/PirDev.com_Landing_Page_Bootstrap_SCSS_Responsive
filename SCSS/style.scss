@@ -1,0 +1,30 @@
+@use "reset";
+@use "colors" as colors;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Sen", sans-serif;
+  font-size: 2rem;
+}
+
+.navbar-brand {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 2rem;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 2rem;
+
+  .fa-bars {
+    font-size: 3rem;
+  }
+}
+
+.nav-link:hover {
+  color: colors.$blue;
+}
