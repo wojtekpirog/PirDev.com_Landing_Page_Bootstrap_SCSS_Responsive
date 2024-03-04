@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,7 @@
   <meta name="description" content="PirDev.com - nowoczesne strony www to nasza pasja!" />
   <meta name="keywords" content="nowoczesne, strony, www, pirdev, pir, dev, pirdev.com" />
   <meta name="author" content="Wojciech Piróg">
+  <link rel="icon" type="image/x-icon" href="./assets/images/code-solid.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
 </head>
 <body>
   <!-- Page navigation -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top py-3">
+  <nav class="navbar navbar-expand-lg shadow fixed-top py-3" data-bs-auto-close="outside">
     <div class="container">
       <!-- Logo -->
       <a href="./index.html" class="navbar-brand d-flex align-items-center lh-1" draggable="true" translate="no">
@@ -27,15 +28,18 @@
       <!-- Logo -->
       <!-- Hamburger -->
       <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i>
+        <!-- <i class="fa-solid fa-bars"></i> -->
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </button>
       <!-- Hamburger -->
       <!-- Collapse -->
       <div id="navbarCollapse" class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav align-items-center">
           <!-- Collapse menu item -->
           <li class="nav-item">
-            <a href="./index.html" class="nav-link mx-lg-3 active" aria-current="page">Strona Główna</a>
+            <a href="./index.html" class="nav-link mx-lg-3 active">Strona Główna</a>
           </li>
           <!-- Collapse menu item -->
           <!-- Collapse menu item -->
@@ -45,17 +49,17 @@
           <!-- Collapse menu item -->
           <!-- Collapse menu item -->
           <li class="nav-item">
-            <a href="./about.html" class="nav-link mx-lg-3">Usługi</a>
+            <a href="./services.html" class="nav-link mx-lg-3">Usługi</a>
           </li>
           <!-- Collapse menu item -->
           <!-- Collapse menu item -->
           <li class="nav-item">
-            <a href="./about.html" class="nav-link mx-lg-3">Projekty</a>
+            <a href="./projects.html" class="nav-link mx-lg-3">Projekty</a>
           </li>
           <!-- Collapse menu item -->
           <!-- Collapse menu item -->
           <li class="nav-item">
-            <a href="./about.html" class="nav-link mx-lg-3">Kontakt</a>
+            <a href="./contact.html" class="nav-link mx-lg-3">Kontakt</a>
           </li>
           <!-- Collapse menu item -->
         </ul>
@@ -63,8 +67,14 @@
       <!-- Collapse -->
     </div>
   </nav>
+  <section>
+    <div style="height: 200vh;">
+      
+    </div>
+  </section>
   <!-- Page navigation -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <script src="./JS/script.js"></script>
 </body>
 </html>

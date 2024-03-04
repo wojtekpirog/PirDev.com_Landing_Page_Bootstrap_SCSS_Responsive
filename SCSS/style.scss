@@ -8,24 +8,60 @@ html {
 body {
   font-family: "Sen", sans-serif;
   font-size: 2rem;
+  height: 100vh;
 }
 
-.navbar-brand {
-  font-size: 3rem;
-  font-weight: 600;
-  padding: 2rem;
-}
+/* NAVBAR */
 
-.navbar-toggler {
-  border: none;
-  padding: 2rem;
-
-  .fa-bars {
+nav {
+  .navbar-brand {
     font-size: 3rem;
+    font-weight: 600;
+    padding: 2rem;
   }
+
+  .navbar-toggler {
+    border: none;
+    padding: 2rem;
+    height: 70px;
+
+    .line1, .line2, .line3 {
+      width: 30px;
+      height: .4rem;
+      margin: .6rem auto;
+      background-color: colors.$black;
+      border-radius: 5rem;
+      transition: transform .3s;
+
+      &:first-child {
+        margin-top: 0;
+
+        &.active {
+          transform: translateY(-5px);
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+
+        &.active {
+          transform: translateY(5px);
+        }
+      }
+    }
+  }  
 }
 
-@media screen and (min-width: 768px) {
+.hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: colors.$hero-shadow;
+}
+
+@media screen and (min-width: 992px) {
   .nav-link {
     position: relative;  
     padding: 0;
