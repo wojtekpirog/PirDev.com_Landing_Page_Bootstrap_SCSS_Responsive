@@ -37,21 +37,25 @@ nav .navbar-toggler .line1, nav .navbar-toggler .line2, nav .navbar-toggler .lin
   margin: 0.6rem auto;
   background-color: #000;
   border-radius: 5rem;
-  transition: transform 0.3s;
+  transition: transform 0.25s ease;
 }
 nav .navbar-toggler .line1:first-child, nav .navbar-toggler .line2:first-child, nav .navbar-toggler .line3:first-child {
   margin-top: 0;
 }
-nav .navbar-toggler .line1:first-child.active, nav .navbar-toggler .line2:first-child.active, nav .navbar-toggler .line3:first-child.active {
-  transform: translateY(-5px);
-}
 nav .navbar-toggler .line1:last-child, nav .navbar-toggler .line2:last-child, nav .navbar-toggler .line3:last-child {
   margin-bottom: 0;
 }
-nav .navbar-toggler .line1:last-child.active, nav .navbar-toggler .line2:last-child.active, nav .navbar-toggler .line3:last-child.active {
+nav .navbar-toggler:hover > .line1 {
+  transform: translateY(-5px);
+}
+nav .navbar-toggler:hover > .line3 {
   transform: translateY(5px);
 }
+nav .navbar-nav .nav-link.active {
+  color: #0d6efd;
+}
 
+/* Sekcja "Hero" */
 .hero-shadow {
   position: absolute;
   top: 0;

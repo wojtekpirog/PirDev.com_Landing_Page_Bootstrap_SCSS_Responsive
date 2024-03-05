@@ -31,26 +31,32 @@ nav {
       margin: .6rem auto;
       background-color: colors.$black;
       border-radius: 5rem;
-      transition: transform .3s;
+      transition: transform .25s ease;
 
       &:first-child {
         margin-top: 0;
-
-        &.active {
-          transform: translateY(-5px);
-        }
       }
 
       &:last-child {
         margin-bottom: 0;
-
-        &.active {
-          transform: translateY(5px);
-        }
       }
     }
-  }  
+
+    &:hover > .line1 {
+      transform: translateY(-5px);
+    }
+
+    &:hover > .line3 {
+      transform: translateY(5px);
+    }
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: colors.$blue;
+  }
 }
+
+/* Sekcja "Hero" */
 
 .hero-shadow {
   position: absolute;
