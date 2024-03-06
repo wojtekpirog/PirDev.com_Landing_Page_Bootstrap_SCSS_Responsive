@@ -56,7 +56,23 @@ nav .navbar-nav .nav-link.active {
 }
 
 /* Sekcja "Hero" */
-.hero-shadow {
+.hero {
+  position: relative;
+  height: 100vh;
+}
+.hero .hero-text {
+  z-index: 1;
+}
+.hero .hero-text h1 {
+  font-size: 5rem;
+}
+.hero .hero-text p {
+  font-size: 3rem;
+}
+.hero.hero-background {
+  background: url("../assets/images/Hero_mq.jpg") 30% 65%/cover;
+}
+.hero .hero-shadow {
   position: absolute;
   top: 0;
   left: 0;
@@ -66,6 +82,7 @@ nav .navbar-nav .nav-link.active {
 }
 
 @media screen and (min-width: 992px) {
+  /* Navbar */
   .nav-link {
     position: relative;
     padding: 0;
@@ -83,5 +100,9 @@ nav .navbar-nav .nav-link.active {
   .nav-link:not(.active):hover::after {
     left: 0;
     width: 100%;
+  }
+  /* Hero */
+  .hero-background {
+    background-image: url("../assets/images/Hero_hq.jpg");
   }
 }/*# sourceMappingURL=style.css.map */

@@ -58,16 +58,38 @@ nav {
 
 /* Sekcja "Hero" */
 
-.hero-shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: colors.$hero-shadow;
+.hero {
+  position: relative;
+  height: 100vh;
+
+  .hero-text {
+    z-index: 1;
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    p {
+      font-size: 3rem;
+    }
+  }
+
+  &.hero-background {
+    background: url("../assets/images/Hero_mq.jpg") 30% 65% / cover;
+  }
+
+  .hero-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: colors.$hero-shadow;
+  }  
 }
 
 @media screen and (min-width: 992px) {
+/* Navbar */
   .nav-link {
     position: relative;  
     padding: 0;
@@ -91,5 +113,9 @@ nav {
         }
       }
     }
+  }
+/* Hero */
+  .hero-background {
+    background-image: url("../assets/images/Hero_hq.jpg");
   }
 }
