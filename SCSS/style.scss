@@ -14,6 +14,8 @@ body {
 /* NAVBAR */
 
 nav {
+  transition: .6s;
+
   .navbar-brand {
     font-size: 3rem;
     font-weight: 600;
@@ -29,16 +31,18 @@ nav {
       width: 30px;
       height: .4rem;
       margin: .6rem auto;
-      background-color: colors.$black;
+      background-color: colors.$white;
       border-radius: 5rem;
       transition: transform .25s ease;
 
       &:first-child {
         margin-top: 0;
       }
-
       &:last-child {
         margin-bottom: 0;
+      }
+      &.black-font-color {
+        background-color: colors.$black;
       }
     }
 
@@ -50,9 +54,17 @@ nav {
       transform: translateY(5px);
     }
   }
+
+  .navbar-nav .nav-link {
+    color: colors.$white;
+
+    &.black-font-color {
+      color: colors.$black;
+    }
+  }
   
   .navbar-nav .nav-link.active {
-    color: colors.$blue;
+    color: colors.$primary-color;
   }
 }
 
@@ -72,10 +84,24 @@ nav {
     p {
       font-size: 3rem;
     }
+
+    a {
+      font-size: 1.6rem;
+
+      &:hover {
+        background-color: colors.$light-hover;
+        color: colors.$light;
+      }
+      .fa-arrow-down {
+        color: colors.$primary-color;
+        font-size: 2.4rem;
+      }
+    }
   }
 
   &.hero-background {
     background: url("../assets/images/Hero_mq.jpg") 30% 65% / cover;
+    background-attachment: fixed;
   }
 
   .hero-shadow {
@@ -85,7 +111,15 @@ nav {
     width: 100%;
     height: 100%;
     background-color: colors.$hero-shadow;
-  }  
+  }
+  
+  .fa-chevron-down {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    padding: 2rem;
+    transform: translateX(-50%);
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -102,7 +136,7 @@ nav {
         bottom: -2px;
         width: 0;
         height: 2px;
-        background-color: colors.$blue;
+        background-color: colors.$primary-color;
         transition: width .3s, left .3s;
       }
     

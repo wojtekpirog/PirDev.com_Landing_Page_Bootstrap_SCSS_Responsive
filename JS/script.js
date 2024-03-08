@@ -1,24 +1,22 @@
-let navbarCollapse;
-let navbarToggler;
+const navbar = document.querySelector("nav");
+const navbarBrand = document.querySelector(".navbar-brand");
+const navbarLinks = document.querySelectorAll("nav .navbar-nav .nav-link");
+const navbarTogglerLines = document.querySelectorAll("nav .navbar-toggler > div");
 
-const main = () => {
-  prepareElements();
-  prepareEvents();
+const handlePageScroll = () => {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 130) {
+      navbar.classList.add("bg-white");
+      navbarBrand.classList.remove("text-white");
+      navbarLinks.forEach(link => link.classList.add("black-font-color"));
+      navbarTogglerLines.forEach(line => line.classList.add("black-font-color"));
+    } else {
+      navbar.classList.remove("bg-white");
+      navbarBrand.classList.add("text-white");
+      navbarLinks.forEach(link => link.classList.remove("black-font-color"));
+      navbarTogglerLines.forEach(line => line.classList.remove("black-font-color"));
+    }
+  });
 }
 
-const prepareElements = () => {
-  navbarCollapse = document.querySelector(".navbar-collapse");
-  navbarToggler = document.querySelector(".navbar-toggler");
-}
-
-const prepareEvents = () => {
-  document.body.addEventListener("click", handleNavbarCollapse);
-}
-
-const handleNavbarCollapse = (event) => {
-  if (!navbarCollapse.contains(event.target)) {
-    navbarCollapse.classList.remove("show");
-  }
-}
-
-document.addEventListener("DOMContentLoaded", main);
+document.addEventListener("DOMContentLoaded", handlePageScroll);

@@ -21,6 +21,9 @@ body {
 }
 
 /* NAVBAR */
+nav {
+  transition: 0.6s;
+}
 nav .navbar-brand {
   font-size: 3rem;
   font-weight: 600;
@@ -35,7 +38,7 @@ nav .navbar-toggler .line1, nav .navbar-toggler .line2, nav .navbar-toggler .lin
   width: 30px;
   height: 0.4rem;
   margin: 0.6rem auto;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 5rem;
   transition: transform 0.25s ease;
 }
@@ -45,11 +48,20 @@ nav .navbar-toggler .line1:first-child, nav .navbar-toggler .line2:first-child, 
 nav .navbar-toggler .line1:last-child, nav .navbar-toggler .line2:last-child, nav .navbar-toggler .line3:last-child {
   margin-bottom: 0;
 }
+nav .navbar-toggler .line1.black-font-color, nav .navbar-toggler .line2.black-font-color, nav .navbar-toggler .line3.black-font-color {
+  background-color: #000;
+}
 nav .navbar-toggler:hover > .line1 {
   transform: translateY(-5px);
 }
 nav .navbar-toggler:hover > .line3 {
   transform: translateY(5px);
+}
+nav .navbar-nav .nav-link {
+  color: #fff;
+}
+nav .navbar-nav .nav-link.black-font-color {
+  color: #000;
 }
 nav .navbar-nav .nav-link.active {
   color: #0d6efd;
@@ -69,8 +81,20 @@ nav .navbar-nav .nav-link.active {
 .hero .hero-text p {
   font-size: 3rem;
 }
+.hero .hero-text a {
+  font-size: 1.6rem;
+}
+.hero .hero-text a:hover {
+  background-color: rgba(248, 249, 250, 0.3);
+  color: #f8f9fa;
+}
+.hero .hero-text a .fa-arrow-down {
+  color: #0d6efd;
+  font-size: 2.4rem;
+}
 .hero.hero-background {
   background: url("../assets/images/Hero_mq.jpg") 30% 65%/cover;
+  background-attachment: fixed;
 }
 .hero .hero-shadow {
   position: absolute;
@@ -79,6 +103,13 @@ nav .navbar-nav .nav-link.active {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.hero .fa-chevron-down {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  padding: 2rem;
+  transform: translateX(-50%);
 }
 
 @media screen and (min-width: 992px) {
