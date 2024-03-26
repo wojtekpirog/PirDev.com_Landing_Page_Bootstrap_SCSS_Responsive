@@ -9,7 +9,7 @@ const handlePageScroll = () => {
       navbar.classList.add("bg-white");
       navbarBrand.classList.remove("text-white");
       navbarLinks.forEach(link => link.classList.add("black-font-color"));
-      navbarTogglerLines.forEach(line => line.classList.add("black-font-color"));
+      navbarTogglerLines.forEach(line => line.classList.add("bg-black"));
     } else {
       navbar.classList.remove("bg-white");
       navbarBrand.classList.add("text-white");
